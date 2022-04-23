@@ -4,7 +4,10 @@ contract MyFirstContract {
     uint256 number;
     string[] names; //this creates a dynamic array of strings called names.
  
- 
+    function addName (string memory _name) public {
+        names.push(_name);
+    } //this function is used to push new values into the array. It takes in a parameter called name.
+
     function changeNumber(uint256 _num) public {
         number = _num;
     } //this function is public and can be called by anyone(an automatic getter function is generated)
