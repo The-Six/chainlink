@@ -8,6 +8,10 @@ contract MyFirstContract {
         names.push(_name);
     } //this function is used to push new values into the array. It takes in a parameter called name.
 
+    function getName(uint _index) public view returns (string memory) {
+        return names[_index];
+    } //this function is used to get a name stored in the array, given an index param passed in. (this is a view function)
+
     function changeNumber(uint256 _num) public {
         number = _num;
     } //this function is public and can be called by anyone(an automatic getter function is generated)
