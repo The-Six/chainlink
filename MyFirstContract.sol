@@ -3,7 +3,12 @@ contract MyFirstContract {
  
     uint256 number;
     string[] names; //this creates a dynamic array of strings called names.
- 
+    mapping (string => uint) public phoneNumbers; //this creates a new mapping of names to int (phonenumbers) 
+    
+    function addMobileNumber(string memory _name, uint _mobileNumber) public {
+        phoneNumbers[_name] = _mobileNumber;
+    } //this function is used to add values to the mapping. It takes in two params.
+
     function addName (string memory _name) public {
         names.push(_name);
     } //this function is used to push new values into the array. It takes in a parameter called name.
