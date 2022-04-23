@@ -8,6 +8,10 @@ contract MyFirstContract {
     function addMobileNumber(string memory _name, uint _mobileNumber) public {
         phoneNumbers[_name] = _mobileNumber;
     } //this function is used to add values to the mapping. It takes in two params.
+    
+    function getMobileNumber(string memory _name) public view returns (uint) {
+        return phoneNumbers[_name];
+    } //this function is used to get a phone number from the mapping for a given name. (take in a name and return an uint i.e integer)
 
     function addName (string memory _name) public {
         names.push(_name);
