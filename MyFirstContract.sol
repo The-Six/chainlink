@@ -2,6 +2,7 @@ pragma solidity ^0.8.7; //This declares the version my contract will be compiled
 contract MyFirstContract {
  
     uint256 number;
+    string[] names; //this creates a dynamic array of strings called names.
  
  
     function changeNumber(uint256 _num) public {
