@@ -32,7 +32,7 @@ contract MyFirstContract {
     } //this function is used to get a name stored in the array, given an index param passed in. (this is a view function)
 
     function changeNumber(uint256 _num) public {
-        number = _num;
+        number = number + _num;
     } //this function is public and can be called by anyone(an automatic getter function is generated)
     
     function getNumber() public view returns (uint256){
