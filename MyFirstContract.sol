@@ -3,7 +3,7 @@ pragma experimental ABIEncoderV2;
 
 contract MyFirstContract {
  
-    uint256 number;
+    uint256 number = 0;
     string[] names; //this creates a dynamic array of strings called names.
     mapping (string => uint) public phoneNumbers; //this creates a new mapping of names to int (phonenumbers) 
 
