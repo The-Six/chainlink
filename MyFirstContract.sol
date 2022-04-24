@@ -1,9 +1,15 @@
 pragma solidity ^0.8.7; //This declares the version my contract will be compiled against.
+pragma experimental ABIEncoderV2;
+
 contract MyFirstContract {
  
     uint256 number;
     string[] names; //this creates a dynamic array of strings called names.
     mapping (string => uint) public phoneNumbers; //this creates a new mapping of names to int (phonenumbers) 
+
+    function getNames(string memory) public view returns (string[] memory) {
+        return names;
+    } //this function is used to get all the entire names array as a string.
 
     function getNamesLength(string memory) public view returns (uint) {
         return names.length;    
