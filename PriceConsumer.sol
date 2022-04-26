@@ -1,7 +1,8 @@
 pragma solidity ^0.8.7;
 import "@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol";
 
-AggregatorV3Interface internal priceFeed; //Internal means that this is only accessed within the contract.
+contract PriceConsumerV3 {
+    AggregatorV3Interface internal priceFeed; //Internal means that this is only accessed within the contract.
     /**
      * Network: Kovan
      * Aggregator: ETH/USD
@@ -17,7 +18,11 @@ AggregatorV3Interface internal priceFeed; //Internal means that this is only acc
     function getLatestPrice() public view returns (int) {
         (
             uint80 roundID,
-            int price
+            int price,
+            uint startedAt,
+            uint timeStamp,
+            uint80 answeredInRound
         ) = priceFeed.latestRoundData();
         return price;
     }
+}
