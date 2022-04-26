@@ -14,4 +14,4 @@ AggregatorV3Interface internal priceFeed; //Internal means that this is only acc
     /**
      * Returns the latest price
      */
-
+    function getLatestPrice() {}
