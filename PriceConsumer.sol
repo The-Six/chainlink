@@ -14,4 +14,10 @@ AggregatorV3Interface internal priceFeed; //Internal means that this is only acc
     /**
      * Returns the latest price
      */
-    function getLatestPrice() {}
+    function getLatestPrice() public view returns (int) {
+        (
+            uint80 roundID,
+            int price
+        ) = priceFeed.latestRoundData();
+        return price;
+    }
