@@ -1,0 +1,26 @@
+{
+  "name": "chainlink",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/The-Six/chainlink.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/The-Six/chainlink/issues"
+  },
+  "homepage": "https://github.com/The-Six/chainlink#readme",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.6",
+    "dotenv": "^16.0.1",
+    "ethers": "^5.6.5",
+    "hardhat": "^2.9.4"
+  }
+}
